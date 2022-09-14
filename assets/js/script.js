@@ -34,13 +34,13 @@ function generatePassword() {
     var passInclUppCase = confirm("Would you like to include upper case characters?");
     var passInclNumeric = confirm("Would you like to include numeric characters?");
     var passInclSpecial = confirm("Would you like to include special characters?");
-    if ((passwordLength > 8 && passwordLength < 128) && (passInclLowCase + passInclUppCase + passInclNumeric + passInclSpecial)) {
+    if ((passwordLength >= 8 && passwordLength <= 128) && (passInclLowCase + passInclUppCase + passInclNumeric + passInclSpecial)) {
       validChoices = true;
     }
     else {
       alert("Please select valid options.");
       var exitConditional = confirm("Would you like to try again?");
-      if (exitConditional) {
+      if (exitConditional == false) {
         return;
       }
     }
@@ -61,7 +61,7 @@ function generatePassword() {
     selectedChoices.push(3);
   }
   //Take above options and generate password
-  for (var i = 0; i <= passwordLength; i++) {
+  for (var i = 0; i < passwordLength; i++) {
     var characterSelected = false;
     while (characterSelected == false) {
       var typeSelector = Math.floor(Math.random() * 3);
@@ -85,10 +85,10 @@ function generatePassword() {
     }
   }
   //Parse into one string
-  for (var i = 0; i < generatedPasswordArray.length; i++){
+  for (var i = 0; i < generatedPasswordArray.length; i++) {
     generatedPassword = generatedPassword + generatedPasswordArray[i];
   }
-  return(generatedPassword)
+  return (generatedPassword)
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -97,9 +97,9 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+  if (password != undefined) {
+    passwordText.value = password;
+  }
 }
 
 // Add event listener to generate button
