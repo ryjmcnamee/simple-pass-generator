@@ -1,5 +1,10 @@
 // Assignment code here
 function generatePassword() {
+
+  const letterArray = ["a", "b", "c", "d", "e", "f", "g", "h","i", "j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  const specialCharacterArray = ["!","\"","#","$","%","&","\'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","\\","]","^","_","`","{","|","}","`"];
+  
+
   var generatedPassword = [];
   //Instantiate while-loop conditional. 
   //While-loop determines if at least ONE option is selected 
@@ -28,13 +33,17 @@ function generatePassword() {
       var typeSelector = Math.floor(Math.random()*4);
       switch(typeSelector){
         case 0:
-          //lower Case
+          generatedPassword.push()
           break;
         case 1:
-          //Upper Case
+          generatedPassword.push();
+          break;
         case 2:
-          //Upper Case
+          generatedPassword.push();
+          break;
         case 3:
+          generatedPassword.push()
+          break;
       }
     }
   }
