@@ -7,7 +7,7 @@
 Input an expected length, and be presented with options for character types to include. Select all 4, or atleast 1 to continue. Password generated should be displayed once options completed. 
 
 ## Screenshot
-<img alt="Picture of top navbar in live site" src="./assets/img/readmeScreenshot.png"/></br>
+<img alt="Picture of password generator site" src="./assets/img/readmeScreenshot.PNG"/></br>
 
 ## Live Demo
 <a href="https://ryjmcnamee.github.io/simple-pass-generator/">See Here...</a>
