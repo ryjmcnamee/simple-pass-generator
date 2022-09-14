@@ -4,6 +4,22 @@ function generatePassword() {
   const letterArray = ["a", "b", "c", "d", "e", "f", "g", "h","i", "j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   const specialCharacterArray = ["!","\"","#","$","%","&","\'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","\\","]","^","_","`","{","|","}","`"];
   
+  function selectCharacter(type){
+    switch(type){
+      case "lower":
+        var charSelect = Math.floor(Math.random()*letterArray.length());
+        return(letterArray[charSelect])
+        break;
+      case "upper":
+        var charSelect = Math.floor(Math.random()*letterArray.length());
+        return(letterArray[charSelect].toUpperCase())
+        break;
+      case "special":
+        var charSelect = Math.floor(Math.random()*specialCharacterArray.length());
+        return(specialCharacterArray[charSelect])
+        break;
+    }
+  }
 
   var generatedPassword = [];
   //Instantiate while-loop conditional. 
